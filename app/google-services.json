@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "350604825946",
+    "firebase_url": "https://village-c49ce.firebaseio.com",
+    "project_id": "village-c49ce",
+    "storage_bucket": "village-c49ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350604825946:android:e404d2fb5d0de519aa4f63",
+        "android_client_info": {
+          "package_name": "com.example.village"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350604825946-3qmg27qssseclkh3htuor9rsf7a2p8rg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.village",
+            "certificate_hash": "bdf5beab55222dc9bd0dd20ff33ae07418e902b7"
+          }
+        },
+        {
+          "client_id": "350604825946-f0buej0ehq0hv0h7sp6qg4bnebip8v44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy_LKWPxadabnJ_5rjSXZ65vkJu4WadX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350604825946-f0buej0ehq0hv0h7sp6qg4bnebip8v44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".timer_page">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="361dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="99dp"
+            app:srcCompat="@drawable/line"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="96dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="154dp"
+            android:layout_height="164dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="129dp"
+            android:layout_marginRight="129dp"
+            android:layout_marginBottom="308dp" />
+
+        <ImageButton
+            android:id="@+id/timerstart"
+            android:layout_width="101dp"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="89dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginBottom="37dp"
+            android:background="@android:color/transparent"
+            android:onClick="timer_start"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/start" />
+
+        <ImageButton
+            android:id="@+id/giveup"
+            android:layout_width="107dp"
+            android:layout_height="55dp"
+            android:layout_alignBottom="@+id/timerstart"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="69dp"
+            android:layout_marginRight="69dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/transparent"
+            android:onClick="timer_giveup"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/giveup" />
+
+        <ImageView
+            android:id="@+id/timer_icon"
+            android:layout_width="62dp"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="61dp"
+            android:layout_marginLeft="61dp"
+            android:layout_marginBottom="140dp"
+            app:srcCompat="@drawable/timer_icon" />
+
+        <TextView
+            android:id="@+id/time_number"
+            android:layout_width="235dp"
+            android:layout_height="56dp"
+            android:layout_alignBottom="@+id/timer_icon"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="-1dp"
+            android:fontFamily="@font/yeah"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="45dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="374dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/yeah"
+            android:gravity="center_horizontal"
+            android:textColor="#8B4513"
+            android:textSize="40dp" />
+
+        <ImageView
+            android:id="@+id/no"
+            android:layout_width="101dp"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="89dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginBottom="37dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/no" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

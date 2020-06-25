@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -60,6 +61,7 @@ public class itembox extends Activity {
                 return 0;
             }
         });
+
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("User");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -82,17 +84,15 @@ public class itembox extends Activity {
             }
         });
 
-
-
         recyclerView.setLayoutManager(mLayoutManager);
         adapter = new CustomAdapter(arrayList, this);
         recyclerView.setAdapter(adapter);//리사이크러뷰에 어댑터 연결
 
         // 아래 버튼
-        Button button5 = (Button) findViewById(R.id.bt_first);
-        Button button6 = (Button) findViewById(R.id.bt_second);
-        Button button7 = (Button) findViewById(R.id.bt_third);
-        Button button8 = (Button) findViewById(R.id.bt_fourth);
+        ImageButton button5 = (ImageButton) findViewById(R.id.bt_first);
+        ImageButton button6 = (ImageButton) findViewById(R.id.bt_second);
+        ImageButton button7 = (ImageButton) findViewById(R.id.bt_third);
+        ImageButton button8 = (ImageButton) findViewById(R.id.bt_fourth);
 
         button5.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -125,7 +125,6 @@ public class itembox extends Activity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplication(), setting.class));
-                finish();
                 overridePendingTransition(0, 0);
             }
         });

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
@@ -24,6 +25,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -35,6 +37,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicMarkableReference;
 
 import androidx.annotation.NonNull;
@@ -52,7 +55,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     private Context context;
     byte[] byteArray;
     private Uri filePath;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
     FirebaseStorage storage = FirebaseStorage.getInstance("gs://village-c49ce.appspot.com");
+    String filename;
+
+
 
     public CustomAdapter(ArrayList<Item> arrayList, Context context) {
         this.arrayList = arrayList;
@@ -75,6 +83,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                 .load(arrayList.get(position).getProfile())
                 .into(holder.iv_profile);
         holder.tv_username.setText(arrayList.get(position).getUsername());
+        filename = arrayList.get(position).getUsername();
     }
 
     @Override
@@ -107,11 +116,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
             MenuItem Edit = menu.add(Menu.NONE, 1001, 1, "사용하기");
             Edit.setOnMenuItemClickListener(onEditMenu);
+
         }
 
         //컨텍스트 메뉴에서 항목 클릭시 동작을 설정
         private final MenuItem.OnMenuItemClickListener onEditMenu = new MenuItem.OnMenuItemClickListener() {
             private DatabaseReference mDatabase;
+            byte[] byteArray;
+
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -119,21 +131,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                 switch (item.getItemId()) {
                     case 1001:  //사용하기
                         //////////////////////////사용한아이템 DB저장
+                        Intent intent = new Intent(itemView.getContext(),MainActivity.class);
+                        //     intent.putExtra("image", String.valueOf(iv_profile));
+                        //     intent.putExtra("String", String.valueOf(tv_username));
+                        // intent.putExtra("profile", String.valueOf(iv_profile.getContext()));
 
-                       Intent intent = new Intent(itemView.getContext(),MainActivity.class);
-                   //     intent.putExtra("image", String.valueOf(iv_profile));
-                   //     intent.putExtra("String", String.valueOf(tv_username));
-                       // intent.putExtra("profile", String.valueOf(iv_profile.getContext()));
-                        itemView.getContext().startActivity(intent);
+                        itemView.getContext().startActivity(intent);        //MainActivity로 전환
+
 /////////////////////****************DBDB***********////////////////
 
-                        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMHH_mmss");
-                        Date now = new Date();
-                        String filename = formatter.format(now);
 
                         StorageReference storageRef = storage.getReference();
                         StorageReference mountainImagesRef = storageRef.child("main/"+filename);
-
 
                         iv_profile.setDrawingCacheEnabled(true);
                         iv_profile.buildDrawingCache();
@@ -142,26 +151,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                         bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
                         byte[] data = baos.toByteArray();
 
-                        UploadTask uploadTask = mountainImagesRef.putBytes(data);
-                        uploadTask.addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception exception) {
-                                // Handle unsuccessful uploads
-                            }
-                        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
-                                // ...
-                            }
-                        });
-
-                        
                         ///////아이템사용처리/////////////////////////////////
                         GradientDrawable drawable =
                                 (GradientDrawable) itemView.getContext().getDrawable(R.drawable.background_rounding);
                         itemView.setBackground(drawable);
                         itemView.setClipToOutline(true);
+
+                        ////////Database/Main 삽입/////////
+                        String profile = "https://firebasestorage.googleapis.com/v0/b/village-c49ce.appspot.com/o/main%2F"+filename+"?alt=media&token=9fd9622b-e261-4aeb-aded-0344bf274ab3";
+                        Item chatData_main = new Item(filename,profile);
+                        databaseReference.child("Main").push().setValue(chatData_main);
+
+                        UploadTask uploadTask = mountainImagesRef.putBytes(data);
                 }
                 return true;
             }

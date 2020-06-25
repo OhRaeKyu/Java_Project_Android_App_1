@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -61,10 +62,10 @@ public class store extends Activity implements View.OnClickListener{
         animal9.setOnClickListener(this);
 
         // 아래 버튼
-        Button button5 = (Button) findViewById(R.id.bt_first);
-        Button button6 = (Button) findViewById(R.id.bt_second);
-        Button button7 = (Button) findViewById(R.id.bt_third);
-        Button button8 = (Button) findViewById(R.id.bt_fourth);
+        ImageButton button5 = (ImageButton) findViewById(R.id.bt_first);
+        ImageButton button6 = (ImageButton) findViewById(R.id.bt_second);
+        ImageButton button7 = (ImageButton) findViewById(R.id.bt_third);
+        ImageButton button8 = (ImageButton) findViewById(R.id.bt_fourth);
 
         button5.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -97,7 +98,6 @@ public class store extends Activity implements View.OnClickListener{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplication(), setting.class));
-                finish();
                 overridePendingTransition(0, 0);
             }
         }) ;
@@ -112,7 +112,7 @@ public class store extends Activity implements View.OnClickListener{
             case R.id.animal:
                 final EditText etEdit = new EditText(this);
                 AlertDialog.Builder dialog = new AlertDialog.Builder(store.this);
-                dialog.setTitle("입력");
+                dialog.setTitle("할 일");
                 dialog.setView(etEdit);
 
                 // OK 버튼 이벤트
@@ -122,9 +122,9 @@ public class store extends Activity implements View.OnClickListener{
                         String inputValue = etEdit.getText().toString();
                         intent4.putExtra("String",inputValue);
                         intent4.putExtra("Name","animal");
-                        int hour = 0;
+                        int hour = 1;
                         int minute = 0;
-                        int second = 3;
+                        int second = 0;
                         TextView textView10 = (TextView)findViewById(R.id.textView10);
                         String times=hour+":"+minute+":"+second;
                         textView10.setText(times);
@@ -148,7 +148,7 @@ public class store extends Activity implements View.OnClickListener{
 
                 final EditText etEdit2 = new EditText(this);
                 AlertDialog.Builder dialog2 = new AlertDialog.Builder(store.this);
-                dialog2.setTitle("입력");
+                dialog2.setTitle("할 일");
                 dialog2.setView(etEdit2);
 
                 // OK 버튼 이벤트
@@ -159,8 +159,8 @@ public class store extends Activity implements View.OnClickListener{
                         intent4.putExtra("String",inputValue);
                         intent4.putExtra("Name","animal2");
                         int hour = 0;
-                        int minute = 0;
-                        int second = 3;
+                        int minute = 45;
+                        int second = 0;
                         intent4.putExtra("hour",hour);
                         intent4.putExtra("minute",minute);
                         intent4.putExtra("second",second);
@@ -181,7 +181,7 @@ public class store extends Activity implements View.OnClickListener{
 
                 final EditText etEdit3 = new EditText(this);
                 AlertDialog.Builder dialog3 = new AlertDialog.Builder(store.this);
-                dialog3.setTitle("입력");
+                dialog3.setTitle("할 일");
                 dialog3.setView(etEdit3);
 
                 // OK 버튼 이벤트
@@ -213,7 +213,7 @@ public class store extends Activity implements View.OnClickListener{
 
                 final EditText etEdit4 = new EditText(this);
                 AlertDialog.Builder dialog4 = new AlertDialog.Builder(store.this);
-                dialog4.setTitle("입력");
+                dialog4.setTitle("할 일");
                 dialog4.setView(etEdit4);
 
                 // OK 버튼 이벤트
@@ -244,7 +244,7 @@ public class store extends Activity implements View.OnClickListener{
             case R.id.animal5:
                 final EditText etEdit5 = new EditText(this);
                 AlertDialog.Builder dialog5 = new AlertDialog.Builder(store.this);
-                dialog5.setTitle("입력");
+                dialog5.setTitle("할 일");
                 dialog5.setView(etEdit5);
 
                 // OK 버튼 이벤트
@@ -275,7 +275,7 @@ public class store extends Activity implements View.OnClickListener{
             case R.id.animal6:
                 final EditText etEdit6 = new EditText(this);
                 AlertDialog.Builder dialog6 = new AlertDialog.Builder(store.this);
-                dialog6.setTitle("입력");
+                dialog6.setTitle("할 일");
                 dialog6.setView(etEdit6);
 
                 // OK 버튼 이벤트
@@ -306,7 +306,7 @@ public class store extends Activity implements View.OnClickListener{
             case R.id.animal7:
                 final EditText etEdit7 = new EditText(this);
                 AlertDialog.Builder dialog7 = new AlertDialog.Builder(store.this);
-                dialog7.setTitle("입력");
+                dialog7.setTitle("할 일");
                 dialog7.setView(etEdit7);
 
                 // OK 버튼 이벤트
@@ -337,7 +337,7 @@ public class store extends Activity implements View.OnClickListener{
             case R.id.animal8:
                 final EditText etEdit8 = new EditText(this);
                 AlertDialog.Builder dialog8 = new AlertDialog.Builder(store.this);
-                dialog8.setTitle("입력");
+                dialog8.setTitle("할 일");
                 dialog8.setView(etEdit8);
 
                 // OK 버튼 이벤트
@@ -369,16 +369,16 @@ public class store extends Activity implements View.OnClickListener{
 
                 final EditText etEdit9 = new EditText(this);
                 AlertDialog.Builder dialog9 = new AlertDialog.Builder(store.this);
-                dialog9.setTitle("입력");
+                dialog9.setTitle("할 일");
                 dialog9.setView(etEdit9);
 
                 // OK 버튼 이벤트
                 dialog9.setPositiveButton ("시작", new DialogInterface.OnClickListener()  {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent4 = new Intent(getApplicationContext(), timer_page.class);
-                       String inputValue = etEdit9.getText().toString();
-                       intent4.putExtra("String",inputValue);
-                        intent4.putExtra("Name","animal8");
+                        String inputValue = etEdit9.getText().toString();
+                        intent4.putExtra("String",inputValue);
+                        intent4.putExtra("Name","animal9");
                         int hour = 0;
                         int minute = 20;
                         int second = 0;

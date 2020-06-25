@@ -22,7 +22,7 @@ public class RecyclerDecoration extends RecyclerView.ItemDecoration {
 
         if (parent.getChildAdapterPosition(view) != parent.getAdapter().getItemCount() - 1)
             outRect.bottom = divHeight;
-            outRect.left = divWidth;
-            outRect.right = divWidth;
+        outRect.left = divWidth;
+        outRect.right = divWidth;
     }
 }

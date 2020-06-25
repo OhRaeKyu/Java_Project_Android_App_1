@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
     tools:context=".timer_page">
 
     <RelativeLayout
@@ -40,7 +39,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="129dp"
             android:layout_marginRight="129dp"
-            android:layout_marginBottom="308dp" />
+            android:layout_marginBottom="300dp" />
 
         <ImageButton
             android:id="@+id/timerstart"
@@ -109,7 +108,6 @@
             android:layout_marginRight="10dp"
             android:fontFamily="@font/yeah"
             android:gravity="center_horizontal"
-            android:textColor="#8B4513"
             android:textSize="40dp" />
 
         <ImageView

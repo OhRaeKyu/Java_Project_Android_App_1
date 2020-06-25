@@ -146,7 +146,7 @@ public class timer_page extends AppCompatActivity {
         textView2.setText(time);
     }
 
-//홈키제어
+    //홈키제어
     protected void onUserLeaveHint() {
         super.onUserLeaveHint();
         state=false;
@@ -171,9 +171,9 @@ public class timer_page extends AppCompatActivity {
         super.onPause();
         ActivityManager activityManager = (ActivityManager) getApplicationContext().getSystemService(ACTIVITY_SERVICE);
         activityManager.moveTaskToFront(getTaskId(), 0);
-          }
+    }
 
-//시작
+    //시작
     public void timer_start(View view) {
         new timer();
         state=true;
@@ -199,13 +199,13 @@ public class timer_page extends AppCompatActivity {
                         finish();
                     }
                 }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // 'No'
-                        new timer();
-                        state=true;
-                    }
-                });
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 'No'
+                new timer();
+                state=true;
+            }
+        });
         AlertDialog alert = alert_confirm.create();
         alert.show();
     }

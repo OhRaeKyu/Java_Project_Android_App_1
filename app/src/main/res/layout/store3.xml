@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
     tools:context=".store3">
     <LinearLayout
         android:id="@+id/menubar"
@@ -12,41 +11,41 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_first"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="홈" />
+            android:src="@drawable/home" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_second"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="상점" />
+            android:src="@drawable/cart" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_third"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="아이템" />
+            android:src="@drawable/box" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_fourth"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="#95C685"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="설정" />
+            android:src="@drawable/settings" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,8 +59,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="@drawable/tab_color_selector"
-            android:background="@drawable/tab_bg_selector"
+            android:fontFamily="@font/jua"
+            android:textSize="17dp"
+            android:background="@color/color_menu"
             android:text="동물" />
 
         <Button
@@ -70,8 +70,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="@drawable/tab_color_selector"
-            android:background="@drawable/tab_bg_selector"
+            android:fontFamily="@font/jua"
+            android:textSize="17dp"
+            android:background="@color/color_menu"
             android:text="식물" />
 
         <Button
@@ -80,8 +81,10 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="@drawable/tab_color_selector"
-            android:background="@drawable/tab_bg_selector"
+            android:fontFamily="@font/jua"
+            android:textSize="17dp"
+
+            android:background="@color/color_menu"
             android:text="기타" />
     </LinearLayout>
 
@@ -94,7 +97,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/architecture" />
 
     <ImageView
@@ -106,7 +109,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/camping" />
 
     <ImageView
@@ -118,7 +121,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="290dp"
         android:layout_marginLeft="277dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/landscape" />
 
     <ImageView
@@ -130,7 +133,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="7dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="260dp"
         android:src="@drawable/fountain" />
 
     <ImageView
@@ -142,7 +145,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="156dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="260dp"
         android:src="@drawable/mushroom" />
 
     <ImageView
@@ -154,7 +157,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="290dp"
         android:layout_marginLeft="273dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="260dp"
         android:src="@drawable/property" />
 
     <ImageView
@@ -166,7 +169,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="450dp"
         android:src="@drawable/fence" />
 
     <ImageView
@@ -178,7 +181,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="450dp"
         android:src="@drawable/house" />
 
 
@@ -191,8 +194,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="53dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="190dp"
         android:text="1:00"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -205,8 +209,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="190dp"
         android:layout_marginLeft="178dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="190dp"
         android:text="0:30"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -219,8 +224,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="320dp"
         android:layout_marginLeft="305dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="190dp"
         android:text="3:00"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -233,8 +239,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="63dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="375dp"
         android:text="1:30"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -247,8 +254,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="193dp"
         android:layout_marginLeft="178dp"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="375dp"
         android:text="2:00"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -261,8 +269,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="325dp"
         android:layout_marginLeft="305dp"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="375dp"
         android:text="1:40"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -275,8 +284,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="585dp"
+        android:layout_marginTop="565dp"
         android:text="0:20"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
 
@@ -289,12 +299,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="185dp"
         android:layout_marginLeft="178dp"
-        android:layout_marginTop="585dp"
+        android:layout_marginTop="565dp"
         android:text="1:10"
+        android:fontFamily="@font/jua"
         android:textColor="#000000"
         android:textSize="20dp" />
-
-
-
 
 </RelativeLayout>

@@ -27,6 +27,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private TextView textViewUserEmail;
     private Button buttonLogout;
     private TextView textivewDelete;
+    private Button buttonhome;
 
 
     @Override
@@ -37,6 +38,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         //initializing views
         textViewUserEmail = (TextView) findViewById(R.id.textviewUserEmail);
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
+        buttonhome = (Button) findViewById(R.id.buttonhome);
         textivewDelete = (TextView) findViewById(R.id.textviewDelete);
 
         //initializing firebase authentication object
@@ -51,12 +53,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         //textViewUserEmail의 내용을 변경해 준다.
-        textViewUserEmail.setText("반갑습니다.\n"+ user.getEmail()+"으로 로그인 하였습니다.");
+        textViewUserEmail.setText( user.getEmail() + "님");
 
         //logout button event
         buttonLogout.setOnClickListener(this);
         textivewDelete.setOnClickListener(this);
-
+        buttonhome.setOnClickListener(this);
 
     }
 
@@ -67,8 +69,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             finish();
             startActivity(new Intent(this, LoginActivity.class));
         }
+        else if(view == buttonhome) {
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        }
         //회원탈퇴를 클릭하면 회원정보를 삭제한다. 삭제전에 컨펌창을 하나 띄워야 겠다.
-        if(view == textivewDelete) {
+        else if(view == textivewDelete) {
             AlertDialog.Builder alert_confirm = new AlertDialog.Builder(ProfileActivity.this);
             alert_confirm.setMessage("정말 계정을 삭제 할까요?").setCancelable(false).setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override
@@ -94,5 +100,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             });
             alert_confirm.show();
         }
+
+
     }
 }

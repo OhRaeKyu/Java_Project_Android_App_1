@@ -25,6 +25,7 @@ public class win extends AppCompatActivity {
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef = storage.getReference();
 
+    byte[] byteArray;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.win);
@@ -37,7 +38,7 @@ public class win extends AppCompatActivity {
         String profile = "https://firebasestorage.googleapis.com/v0/b/village-c49ce.appspot.com/o/images%2F"+s+".png?alt=media&token=9fd9622b-e261-4aeb-aded-0344bf274ab3";
         Item chatData = new Item(userName, profile);  // 유저 이름과 메세지로 chatData 만들기
         databaseReference.child("User").push().setValue(chatData);  // 기본 database 하위 message라는 child에 chatData를 list로 만들기
-       // editText.setText("");
+        // editText.setText("");
 
 
         UploadTask uploadTask = mountainImagesRef.putBytes(data);
@@ -92,8 +93,10 @@ public class win extends AppCompatActivity {
 //뒤로가기 금지
     }
     public void storage(View view) {
-        startActivity(new Intent(getApplication(), itembox.class));
+        Intent intent = new Intent(getApplication(),itembox.class);
+        startActivity(intent);
         finish();
+        overridePendingTransition(0, 0);
     }
 }
 

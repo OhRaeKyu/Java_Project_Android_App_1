@@ -4,8 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe6b3"
     >
+
+    <ImageView
+        android:id="@+id/cloud"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/cloud" />
+
+    <ImageView
+        android:id="@+id/clouds"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/cloud" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -16,10 +39,12 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/farm"
             android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            />
 
         <TextView
             android:id="@+id/textviewUserEmail"
@@ -27,14 +52,27 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeah"
+            android:textSize="15dp"/>
 
         <Button
             android:id="@+id/buttonLogout"
-            android:text="로그아웃"
-            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#6BA5D3"
+            android:fontFamily="@font/yeah"
+            android:text="로그아웃" />
+
+        <Button
+            android:id="@+id/buttonhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#AFD1EC"
+            android:fontFamily="@font/yeah"
+            android:text="내 마을로 출발 =3" />
 
         <TextView
             android:text="회원탈퇴 합니다."
@@ -43,6 +81,7 @@
             android:textColor="@color/colorAccent"
             android:layout_margin="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeah"/>
     </LinearLayout>
 </RelativeLayout>

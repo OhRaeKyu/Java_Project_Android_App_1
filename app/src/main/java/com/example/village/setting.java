@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class setting extends Activity {
 
@@ -14,10 +16,10 @@ public class setting extends Activity {
         setContentView(R.layout.activity_setting);
 
         // 아래 버튼
-        Button button5 = (Button) findViewById(R.id.bt_first);
-        Button button6 = (Button) findViewById(R.id.bt_second);
-        Button button7 = (Button) findViewById(R.id.bt_third);
-        Button button8 = (Button) findViewById(R.id.bt_fourth);
+        ImageButton button5 = (ImageButton) findViewById(R.id.bt_first);
+        ImageButton button6 = (ImageButton) findViewById(R.id.bt_second);
+        ImageButton button7 = (ImageButton) findViewById(R.id.bt_third);
+        ImageButton button8 = (ImageButton) findViewById(R.id.bt_fourth);
 
         button5.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -54,5 +56,6 @@ public class setting extends Activity {
                 overridePendingTransition(0, 0);
             }
         }) ;
+
     }
 }

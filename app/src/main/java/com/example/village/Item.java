@@ -2,8 +2,8 @@ package com.example.village;
 
 public class Item {
 
-private String username;
-private String profile;
+    private String username;
+    private String profile;
 
     public Item(){}
 

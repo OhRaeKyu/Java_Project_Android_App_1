@@ -20,6 +20,7 @@ public class failed extends AppCompatActivity {
     public void back_home(View view) {
         startActivity(new Intent(getApplication(), MainActivity.class));
         finish();
+        overridePendingTransition(0, 0);
     }
 }
 

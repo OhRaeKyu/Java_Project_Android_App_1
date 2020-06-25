@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".setting">
-
     <LinearLayout
         android:id="@+id/menubar"
         android:layout_width="match_parent"
@@ -12,41 +11,48 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
 
-        <Button
+
+        <ImageButton
             android:id="@+id/bt_first"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="홈" />
+            android:src="@drawable/home" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_second"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="상점" />
+            android:src="@drawable/cart" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_third"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="아이템" />
+            android:src="@drawable/box" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_fourth"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@color/color_menu"
             android:gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="설정" />
+            android:src="@drawable/settings" />
     </LinearLayout>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.example.village.SettingPreferenceFragment"
+        android:layout_width="match_parent"
+        android:layout_height="660dp" />
 
 </RelativeLayout>

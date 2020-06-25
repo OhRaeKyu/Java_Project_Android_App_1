@@ -104,6 +104,7 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
 
         if(view == textviewSingin) {
             //TODO
+            finish();
             startActivity(new Intent(this, LoginActivity.class)); //추가해 줄 로그인 액티비티
         }
     }

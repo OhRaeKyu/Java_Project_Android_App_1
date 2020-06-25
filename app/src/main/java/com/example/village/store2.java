@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
@@ -60,10 +61,10 @@ public class store2 extends Activity implements View.OnClickListener{
         plant9.setOnClickListener(this);
 
         // 아래 버튼
-        Button button5 = (Button) findViewById(R.id.bt_first);
-        Button button6 = (Button) findViewById(R.id.bt_second);
-        Button button7 = (Button) findViewById(R.id.bt_third);
-        Button button8 = (Button) findViewById(R.id.bt_fourth);
+        ImageButton button5 = (ImageButton) findViewById(R.id.bt_first);
+        ImageButton button6 = (ImageButton) findViewById(R.id.bt_second);
+        ImageButton button7 = (ImageButton) findViewById(R.id.bt_third);
+        ImageButton button8 = (ImageButton) findViewById(R.id.bt_fourth);
 
         button5.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -96,7 +97,6 @@ public class store2 extends Activity implements View.OnClickListener{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplication(), setting.class));
-                finish();
                 overridePendingTransition(0, 0);
             }
         }) ;
@@ -108,7 +108,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant:
                 final EditText etEdit = new EditText(this);
                 AlertDialog.Builder dialog = new AlertDialog.Builder(store2.this);
-                dialog.setTitle("입력");
+                dialog.setTitle("할 일");
                 dialog.setView(etEdit);
 
                 // OK 버튼 이벤트
@@ -139,7 +139,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant2:
                 final EditText etEdit2 = new EditText(this);
                 AlertDialog.Builder dialog2 = new AlertDialog.Builder(store2.this);
-                dialog2.setTitle("입력");
+                dialog2.setTitle("할 일");
                 dialog2.setView(etEdit2);
 
                 // OK 버튼 이벤트
@@ -170,7 +170,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant3:
                 final EditText etEdit3 = new EditText(this);
                 AlertDialog.Builder dialog3 = new AlertDialog.Builder(store2.this);
-                dialog3.setTitle("입력");
+                dialog3.setTitle("할 일");
                 dialog3.setView(etEdit3);
 
                 // OK 버튼 이벤트
@@ -201,7 +201,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant4:
                 final EditText etEdit4 = new EditText(this);
                 AlertDialog.Builder dialog4 = new AlertDialog.Builder(store2.this);
-                dialog4.setTitle("입력");
+                dialog4.setTitle("할 일");
                 dialog4.setView(etEdit4);
 
                 // OK 버튼 이벤트
@@ -232,7 +232,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant5:
                 final EditText etEdit5 = new EditText(this);
                 AlertDialog.Builder dialog5 = new AlertDialog.Builder(store2.this);
-                dialog5.setTitle("입력");
+                dialog5.setTitle("할 일");
                 dialog5.setView(etEdit5);
 
                 // OK 버튼 이벤트
@@ -263,7 +263,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant6:
                 final EditText etEdit6 = new EditText(this);
                 AlertDialog.Builder dialog6 = new AlertDialog.Builder(store2.this);
-                dialog6.setTitle("입력");
+                dialog6.setTitle("할 일");
                 dialog6.setView(etEdit6);
 
                 // OK 버튼 이벤트
@@ -294,7 +294,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant7:
                 final EditText etEdit7 = new EditText(this);
                 AlertDialog.Builder dialog7 = new AlertDialog.Builder(store2.this);
-                dialog7.setTitle("입력");
+                dialog7.setTitle("할 일");
                 dialog7.setView(etEdit7);
 
                 // OK 버튼 이벤트
@@ -325,7 +325,7 @@ public class store2 extends Activity implements View.OnClickListener{
             case R.id.plant8:
                 final EditText etEdit8 = new EditText(this);
                 AlertDialog.Builder dialog8 = new AlertDialog.Builder(store2.this);
-                dialog8.setTitle("입력");
+                dialog8.setTitle("할 일");
                 dialog8.setView(etEdit8);
 
                 // OK 버튼 이벤트
@@ -358,7 +358,7 @@ public class store2 extends Activity implements View.OnClickListener{
 
                 final EditText etEdit9 = new EditText(this);
                 AlertDialog.Builder dialog9 = new AlertDialog.Builder(store2.this);
-                dialog9.setTitle("입력");
+                dialog9.setTitle("할 일");
                 dialog9.setView(etEdit9);
 
                 // OK 버튼 이벤트

@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(new Intent(this, SignActivity.class));
         }
         if(view == textviewFindPassword) {
-            finish();
+
             startActivity(new Intent(this, FindActivity.class));
         }
     }

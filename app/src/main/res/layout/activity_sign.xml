@@ -6,21 +6,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <ImageView
+        android:id="@+id/cherry"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/cherry" />
+
+
 
     <TextView
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textSize="23dp"
-        android:textColor="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:fontFamily="@font/yeah"
+        android:textColor="#F8A29C"
         android:text="회원가입" />
 
+    <ImageView
+        android:id="@+id/cherrys"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/cherry" />
+
     <TextView
-        android:layout_gravity="center_horizontal"
-        android:text="이 앱은 회원가입을 해야 정상적으로 사용할 수 있습니다.\n Email로 등록해 주세요."
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/yeah"
+        android:text="이 앱은 회원가입을 해야 정상적으로 사용할 수 있습니다.\n Email로 등록해 주세요." />
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -29,6 +56,7 @@
         android:layout_margin="10dp"
         android:layout_gravity="center_horizontal"
         android:hint="Enter email"
+        android:fontFamily="@font/yeah"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -38,30 +66,44 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Enter password"
+        android:fontFamily="@font/yeah"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonSignup"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:backgroundTint="#F8A29C"
+        android:fontFamily="@font/yeah"
         android:text="회원가입" />
 
     <TextView
-        android:text="회원이시면 여기에서 로그인 해주세요."
         android:id="@+id/textViewSignin"
-        android:textAlignment="center"
-        android:layout_margin="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/yeah"
+        android:text="회원이시면 여기에서 로그인 해주세요."
+        android:textAlignment="center" />
     <TextView
         android:layout_gravity="center_horizontal"
         android:textColor="@color/colorAccent"
         android:id="@+id/textviewMessage"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/yeah"
         android:layout_height="wrap_content" />
-
+    <ImageView
+        android:id="@+id/cherryss"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cherry" />
 
 </LinearLayout>
